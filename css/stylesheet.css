@@ -1,0 +1,212 @@
+/* ---- GENERAL STYLES ---- */
+:root{
+    --side-nav-bar-padding: 1rem;
+    --text-color: rgb(135, 134, 135);
+    --hover-color: rgb(173, 255, 47);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.hover-cursor:hover{
+    cursor: pointer;
+}
+
+/* ---- MAIN CONTAINER ----*/
+
+.main-container{
+    flex-direction: row;
+    flex-grow: 1;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* ---- LEFT SIDE-NAVIGATION BAR ---- */
+
+.side-nav-bar{
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    flex-flow: column wrap;
+    justify-content: space-between
+    ;
+    overflow: scroll;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+.nav-logo{
+    width: 100%;
+    padding: 1rem 4rem 1rem 1rem;
+}
+
+.menu-list{
+    padding: 1rem 1rem 1rem 0;
+    list-style: none;
+}
+
+.menu-list li{
+    border-left: 5px solid transparent;
+    padding: .5rem 0;
+    font-weight: bold;
+}
+
+.menu-list li:hover{
+    border-left: 5px solid var(--hover-color);
+    color: white;
+}
+
+.menu-list svg{
+    width: 50px;
+    padding-left: 1rem;
+    vertical-align: middle;
+}
+
+.menu-list span{
+    font-size: 1.25rem;
+    padding-left: .5rem;
+    height: auto;
+    width: 100%;
+}
+
+/* ---- MAIN ---- */
+/* contains all element other than the left nav bar and the footer */
+
+main{
+    background-color: rgb(20, 25, 34);
+    flex-grow: 1;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* ---- UPGRADE BAR ---- */
+
+.upgrade-bar{
+    height: 100px;
+    background-color: rgb(8, 11, 18);
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.upgrade-bar button{
+    height: 25%;
+    width: fit-content;
+    padding: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: transparent;
+    line-height: 0;
+}
+
+.upgrade-bar button:hover{
+    text-decoration: underline;
+    border: 2px solid rgb(186, 186, 186);
+    scale: 1.1;
+    background-color: rgb(20, 25, 34);
+}
+
+/* ---- CANVA ---- */
+/* contains all elements other than the upgrade bar */
+
+.canva{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+    padding: 2rem;
+    color: white;
+}
+
+/* ---- CATEGORIES BAR ---- */
+
+.categories{
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+}
+
+.categories ul{
+    min-width: 50%;
+    list-style: none;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.categories .on-open-selected{
+    display: inline-block;
+    padding: 1rem 1rem .25rem;
+    margin: 0rem 0.5rem;
+    position: relative;
+    border-bottom: 2px solid var(--hover-color);
+}
+
+.categories .on-open-selected a{
+    color: white;
+}
+
+.categories li{
+    display: inline-block;
+    padding: 1rem 1rem .25rem;
+    margin: 0rem 0.5rem;
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.categories li:hover{
+    border-bottom: 2px solid var(--hover-color);
+}
+
+.categories li:hover a{
+    color: white;
+}
+
+.categories li .left-border-hider{
+    position: absolute;
+    left: 0;
+    width: 30%;
+    bottom: -5px;
+    height: 6px;
+    background-color: rgb(20, 25, 34);
+}
+
+.categories li .right-border-hider{
+    position: absolute;
+    right: 0;
+    width: 30%;
+    bottom: -5px;
+    height: 6px;
+    background-color: rgb(20, 25, 34);
+}
+
+.categories a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ---- FOOTER ---- */
+
+footer{
+    min-height: 100px;
+    background-color: rgb(40, 40, 40);
+    z-index: 3;
+}
