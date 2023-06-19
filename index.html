@@ -13,15 +13,16 @@
         <div class="flex side-nav-bar">
             <div>
                 <img class="nav-logo" src="img/logo.svg" alt="spotify-logo">
-                <ul class="menu-list">
-                    <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"/></svg><span class="hover-cursor">Home</span></li>
-                    <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"/></svg><span class="hover-cursor">Cerca</span></li>
-                    <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="currentColor"/></svg><span class="hover-cursor">La tua libreria</span></li>
-                </ul>
-                <span>PLAYLIST</span>
-            </div>
-            <div>
-                
+                <div>
+                    <ul class="menu-list">
+                        <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"/></svg><span class="hover-cursor">Home</span></li>
+                        <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"/></svg><span class="hover-cursor">Cerca</span></li>
+                        <li><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="currentColor"/></svg><span class="hover-cursor">La tua libreria</span></li>
+                    </ul>
+                </div>
+                <div class="playlist">
+                    <span>PLAYLIST</span>
+                </div>
             </div>
         </div>
         <!-- MAIN CONTAINER -->
@@ -43,17 +44,101 @@
                     </ul>
                 </div>
                 <!-- RECENTLY PLAYED-->
-                <div>
+                <section class="recently-played">
                     <h2>Recently played</h2>
-                </div>
+                    <div class="flex row">
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/metal_lifting.jpg" alt="">
+                            </div>
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/stranger.jpeg" alt="">
+                            </div>
+                            <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                            <h4>Kyle Dixon & Michael Stein</h4>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/aquietplace.jpeg" alt="">
+                            </div>
+                            <h3>A quiet place</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/split.jpeg" alt="">
+                            </div>
+                            <h3>Split</h3>
+                            <h4>Subtitle</h>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/cure.jpeg" alt="">
+                            </div>
+                            <h3>A cure for wellness</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/sinister.jpeg" alt="">
+                            </div>
+                            <h3>Sinister</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                    </div>
+                </section>
                 <!-- CREATED FOR YOU -->
-                <div>
-
-                </div>
+                <section class="created">
+                    <h2>Creato per John Doe</h2>
+                    <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                    <div class="flex row">
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/radar.jpeg" alt="">
+                            </div>
+                            <h3>Release Radar</h3>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/mixdaily.jpeg" alt="">
+                            </div>
+                            <h3>Daily Mix 1</h3>
+                        </div>
+                    </div>
+                </section>
                 <!-- POPULAR ARTISTS-->
-                <div>
-
-                </div>
+                <section class="popular">
+                    <h2>Artisti più popolari</h2>
+                    <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                    <div class="flex row">
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/youg.jpeg" alt="">
+                            </div>
+                            <h3>Release Radar</h3>
+                        </div>
+                        <div class="card">
+                            <div class="image-container">
+                                <div class="flex overlay"><i class="fa-regular fa-circle-play"></i></div>
+                                <img src="img/einaudi.jpeg" alt="">
+                            </div>
+                            <h3>Daily Mix 1</h3>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     </div>

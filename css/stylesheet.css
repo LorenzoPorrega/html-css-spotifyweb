@@ -5,9 +5,7 @@
     --hover-color: rgb(173, 255, 47);
 }
 
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,6 +26,21 @@ body{
     cursor: pointer;
 }
 
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+h4{
+    color: var(--text-color);
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+}
+
 /* ---- MAIN CONTAINER ----*/
 
 .main-container{
@@ -40,29 +53,32 @@ body{
 /* ---- LEFT SIDE-NAVIGATION BAR ---- */
 
 .side-nav-bar{
-    width: 300px;
+    min-width: 200px;
     background-color: rgb(0, 0, 0);
     flex-flow: column wrap;
-    justify-content: space-between
-    ;
+    justify-content: space-between;
     overflow: scroll;
     color: var(--text-color);
     z-index: 2;
+    font-size: 0.75rem;
+}
+
+.side-nav-bar div:first-of-type{
+    padding: 0rem 1rem 2rem 0;
 }
 
 .nav-logo{
     width: 100%;
-    padding: 1rem 4rem 1rem 1rem;
+    padding: 1rem;
 }
 
 .menu-list{
-    padding: 1rem 1rem 1rem 0;
     list-style: none;
 }
 
 .menu-list li{
     border-left: 5px solid transparent;
-    padding: .5rem 0;
+    padding: .25rem 0;
     font-weight: bold;
 }
 
@@ -71,17 +87,28 @@ body{
     color: white;
 }
 
+
 .menu-list svg{
-    width: 50px;
+    width: 40px;
     padding-left: 1rem;
     vertical-align: middle;
 }
 
 .menu-list span{
-    font-size: 1.25rem;
     padding-left: .5rem;
     height: auto;
     width: 100%;
+}
+
+.playlist{
+    padding-left: calc(5px + 1rem);
+    padding-right: 1rem;
+}
+
+.playlist span{
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
 }
 
 /* ---- MAIN ---- */
@@ -89,6 +116,7 @@ body{
 
 main{
     background-color: rgb(20, 25, 34);
+    display: flex;
     flex-grow: 1;
     flex-direction: column;
     z-index: 1;
@@ -105,10 +133,8 @@ main{
 }
 
 .upgrade-bar button{
-    height: 25%;
-    width: fit-content;
-    padding: 2rem;
-    font-size: 1.25rem;
+    padding: 15px;
+    font-size: 0.75rem;
     font-weight: bold;
     color: white;
     border-radius: 50px;
@@ -132,8 +158,15 @@ main{
     justify-content: flex-start;
     align-items: flex-start;
     overflow: auto;
-    padding: 2rem;
+    padding: 0rem 2rem 2rem 2rem;
     color: white;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+.canva section{
+    padding-top: 2rem;
+    width: 100%;
 }
 
 /* ---- CATEGORIES BAR ---- */
@@ -142,6 +175,7 @@ main{
     height: fit-content;
     width: 100%;
     justify-content: center;
+    position: sticky;
 }
 
 .categories ul{
@@ -165,10 +199,12 @@ main{
 
 .categories li{
     display: inline-block;
-    padding: 1rem 1rem .25rem;
+    padding: 1rem 0.5rem .25rem;
     margin: 0rem 0.5rem;
     position: relative;
     border-bottom: 2px solid transparent;
+    font-size: 0.75rem;
+
 }
 
 .categories li:hover{
@@ -202,6 +238,71 @@ main{
     text-decoration: none;
     font-weight: bold;
 }
+
+/* ---- CANVA SECTIONS ---- */
+
+/* ---- RECEMTLY PLAYED ---- */
+.row{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 1rem;
+    width: calc(100vw - 300px);
+}
+
+.row .card{
+    width: calc(16.6% - 1rem);
+    text-align: center;
+}
+
+.card .image-container{
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.card .image-container:hover{
+    cursor: pointer;
+}
+
+.card .image-container .overlay{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    transition: .1s ease-out;
+}
+
+.card .image-container:hover .overlay{
+    visibility: visible;
+    background-color: rgb(20, 25, 34, 0.75);
+}
+
+.card .image-container .overlay i{
+    width: 40%;
+    font-size: 5vw;
+    aspect-ratio: 1/1;
+    color: rgb(193, 193, 193);
+}
+
+.popular .image-container{
+    border: 0px solid transparent;
+    border-radius: 50%;
+}
+
+/* ---- CREATED FOR YOU ---- */
+
 
 /* ---- FOOTER ---- */
 
