@@ -55,11 +55,16 @@ h4{
 .side-nav-bar{
     min-width: 200px;
     background-color: rgb(0, 0, 0);
-    flex-flow: row wrap;
+    flex-flow: column;
+    justify-content: space-between;
     overflow: hidden;
     color: var(--text-color);
     z-index: 2;
     font-size: 0.75rem;
+}
+
+.top{
+    max-height: 80%;
 }
 
 .box{
@@ -70,6 +75,10 @@ h4{
 .nav-logo{
     width: 100%;
     padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.nav-logo-xs{
+    display: none;
 }
 
 .menu-list{
@@ -102,6 +111,7 @@ h4{
 
 .playlist{
     padding-left: calc(5px + 1rem);
+    height: 40%;
 }
 
 .playlist .title{
@@ -134,7 +144,7 @@ h4{
 
 .playlists-box{
     width: 100%;
-    height: 30%;
+    height: 100%;
     overflow: auto;
     margin-top: 1rem;
 }
@@ -145,13 +155,27 @@ h4{
 }
 
 .iuser{
-    
+    padding-left: calc(5px + 1rem);
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .iuser svg{
-    display: block;
+    display: inline-block;
     width: 1rem;
     aspect-ratio: 1/1;
+    margin-right: 0.5rem;
+}
+
+.download:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.username{
+    color: white;
+    font-size: 1.25rem;
 }
 
 
@@ -169,7 +193,7 @@ main{
 /* ---- UPGRADE BAR ---- */
 
 .upgrade-bar{
-    height: 100px;
+    min-height: 100px;
     background-color: rgb(8, 11, 18);
     justify-content: flex-end;
     align-items: center;
@@ -285,7 +309,7 @@ main{
 
 /* ---- CANVA SECTIONS ---- */
 
-/* ---- RECEMTLY PLAYED ---- */
+/* ---- RECENTLY PLAYED ---- */
 .row{
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -358,4 +382,85 @@ footer{
     min-height: 100px;
     background-color: rgb(40, 40, 40);
     z-index: 3;
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+@media screen and (max-width: 1100px) {
+    .row .card{
+        width: calc(25% - 1rem);
+    }
+
+    .multiple{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .row .card{
+        width: calc(50% - 1rem);
+    }
+
+    .multiple{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .row .card{
+        width: calc(100% - 1rem);
+    }
+
+    .multiple{
+        justify-content: flex-start;
+    }
+
+    .upgrade-bar{
+        display: none;
+    }
+
+    .upgrade-bar button{
+        display: none;
+    }
+
+    .side-nav-bar{
+        min-width: fit-content;
+    }
+
+    span{
+        display: none;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .playlist{
+        display: none;
+    }
+
+    .nav-logo{
+        display: none;
+    }
+
+    .nav-logo-xs{
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .menu-list{
+        margin-top: 1rem;
+    }
+
+    .menu-list svg{
+        padding-left: 10px;
+    }
+
+    .iuser{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        padding: 0
+    }
 }
