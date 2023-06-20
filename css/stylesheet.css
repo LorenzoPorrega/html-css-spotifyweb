@@ -363,7 +363,7 @@ main{
 
 .card .image-container .overlay i{
     width: 40%;
-    font-size: 5vw;
+    font-size: 3rem;
     aspect-ratio: 1/1;
     color: rgb(193, 193, 193);
 }
@@ -394,6 +394,10 @@ footer{
     .multiple{
         justify-content: flex-start;
     }
+
+    .card .image-container .overlay i{
+        font-size: 2.5rem;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -403,6 +407,10 @@ footer{
 
     .multiple{
         justify-content: flex-start;
+    }
+
+    .card .image-container .overlay i{
+        font-size: 4rem;
     }
 }
 
@@ -445,16 +453,21 @@ footer{
 
     .nav-logo-xs{
         display: block;
-        width: 80%;
+        width: 60%;
         margin: 1rem auto;
     }
 
-    .menu-list{
-        margin-top: 1rem;
+    .nav-logo-xs:hover{
+        cursor: pointer;
+        color: grey;
     }
 
     .menu-list svg{
         padding-left: 10px;
+    }
+
+    .menu-list svg:hover{
+        cursor: pointer;
     }
 
     .iuser{
@@ -462,5 +475,9 @@ footer{
         flex-flow: column;
         width: 100%;
         padding: 0
+    }
+
+    .card .image-container .overlay i{
+        font-size: 6rem;
     }
 }
